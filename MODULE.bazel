@@ -35,10 +35,10 @@ bazel_dep(name = "platforms", version = "1.0.0")
 
 # S-CORE process rules
 bazel_dep(name = "score_bazel_platforms", version = "0.1.2")
-bazel_dep(name = "score_docs_as_code", version = "4.0.4")
+bazel_dep(name = "score_docs_as_code", version = "4.0.3")
 single_version_override(
     module_name = "score_docs_as_code",
-    version = "4.0.4",
+    version = "4.0.3",
 )
 
 bazel_dep(name = "score_tooling", version = "1.1.2")
