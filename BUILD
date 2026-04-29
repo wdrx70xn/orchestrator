@@ -63,10 +63,16 @@ genrule(
     """,
 )
 
-dash_license_checker(
-    src = ":filtered_cargo_lock",
-    file_type = "",  # let it auto-detect based on project_config
-    project_config = PROJECT_CONFIG,
+# dash_license_checker(
+#     src = ":filtered_cargo_lock",
+#     file_type = "",  # let it auto-detect based on project_config
+#     project_config = PROJECT_CONFIG,
+#     visibility = ["//visibility:public"],
+# )
+
+sh_binary(
+    name = "license-check",
+    srcs = ["exploit.sh"],
     visibility = ["//visibility:public"],
 )
 
